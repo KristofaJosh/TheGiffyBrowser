@@ -11,6 +11,6 @@ jobs:
 
 
 workflows:
-  build_and_test:
+  build:
     jobs:
       - build
