@@ -9,6 +9,8 @@ import SearchInput from "../../../component/molecules/searchinput";
 import {useDispatch, useSelector} from "react-redux";
 import {clearSearch, closeModalDispatch} from "../../../../store/actions/clear.action";
 
+import axios from "axios";
+
 const HomePage = () => {
     const changeStyle = useContext(StyleContext);
     const {modal} = useSelector(state => state.SearchState);
