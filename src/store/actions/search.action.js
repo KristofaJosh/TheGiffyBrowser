@@ -26,7 +26,7 @@ export const searchError = (message, loading) => {
 };
 
 export const getResults = ({search, offset, count}) => {
-    
+
     return dispatch => {
         if (offset < 1 || offset === undefined) {
             dispatch(searchProgress(true));
@@ -49,7 +49,7 @@ export const getResults = ({search, offset, count}) => {
                     dispatch(searchResult(res))
                 }
             }
-            
+
         }).catch((err) => {
             dispatch(searchError(err.message))
         });
