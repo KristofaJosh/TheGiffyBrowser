@@ -12,17 +12,17 @@ import {clearSearch, closeModalDispatch} from "../../../../store/actions/clear.a
 const HomePage = () => {
     const changeStyle = useContext(StyleContext);
     const {modal} = useSelector(state => state.SearchState);
-    
+
     const dispatch = useDispatch();
-    
+
     const closeModal = () => {
         if (modal) {
             dispatch(closeModalDispatch(false));
             dispatch(clearSearch())
         }
     };
-    
-    
+
+
     return (
         <>
             <MainTemplate variant={"primary"} onClick={closeModal}>
@@ -37,12 +37,14 @@ const HomePage = () => {
                             </strong>mode.</small>
                     </div>
                 ) : null}
-                
+
                 <Styling variant={'primary'}>
                     <div className="container">
                         <div className="content">
                             <div className="logo" onClick={changeStyle.changeMode}>
-                                <img src={"/assets/images/logo/riby_logo.svg"} alt=""/>
+                                <Text variant={'primary'} size={siteFonts.normal} bold textCase={'uppercase'}>the
+                                    click me
+                                </Text>
                                 <img src={"/assets/images/logo/cj_logo.png"} alt=""/>
                             </div>
                         </div>
@@ -58,7 +60,7 @@ const HomePage = () => {
                                 </div>
                             </section>
                             <section className={'last-child'}>
-                                
+
                                 <div>
                                     <Text size={siteFonts.sHeading} textCase={'uppercase'}>
                                         Were expert to create beautiful design & smart technology
@@ -68,24 +70,24 @@ const HomePage = () => {
                                         reprehenderit veniam voluptatum.
                                     </Text>
                                 </div>
-                                
-                                <div className={'ad'}>
-                                    <span className={'ad-brand'}>
-                                        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>
-                                        <Text size={siteFonts.medium}>Web & Mobile</Text>
-                                    </span>
-                                    <span className={'ad-brand'}>
-                                        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>
-                                        <Text size={siteFonts.medium}>Web & Mobile</Text>
-                                    </span>
-                                    <span className={'ad-brand'}>
-                                        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>
-                                        <Text size={siteFonts.medium}>Web & Mobile</Text>
-                                    </span>
-                                
-                                
-                                </div>
-                            
+
+                                {/*<div className={'ad'}>*/}
+                                {/*    <span className={'ad-brand'}>*/}
+                                {/*        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>*/}
+                                {/*        <Text size={siteFonts.medium}>Web & Mobile</Text>*/}
+                                {/*    </span>*/}
+                                {/*    <span className={'ad-brand'}>*/}
+                                {/*        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>*/}
+                                {/*        <Text size={siteFonts.medium}>Web & Mobile</Text>*/}
+                                {/*    </span>*/}
+                                {/*    <span className={'ad-brand'}>*/}
+                                {/*        <img src={"/assets/images/logo/riby_single_logo.png"} alt=""/>*/}
+                                {/*        <Text size={siteFonts.medium}>Web & Mobile</Text>*/}
+                                {/*    </span>*/}
+
+
+                                {/*</div>*/}
+
                             </section>
                         </div>
                     </div>
@@ -101,7 +103,7 @@ width: 100%;
 min-height: 100vh;
 display: flex;
 justify-content: center;
-overflow: scroll;
+// overflow: scroll;
 
 .container {
 
@@ -116,6 +118,7 @@ overflow: scroll;
 .logo {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: 1rem 0;
     
     img {width: 125px; margin: 0 5px; padding: 1rem;};
